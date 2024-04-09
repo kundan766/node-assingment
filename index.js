@@ -4,10 +4,11 @@ const mongoose = require('mongoose');
 
 const app=express();
 const db=require('./db');
+require("dotenv").config();
 
 const axios = require("axios");
 
-const PORT=4000;
+const PORT=process.env.PORT || 4000;
 
 const bodyParser=require("body-parser");
 app.use(bodyParser.json());
